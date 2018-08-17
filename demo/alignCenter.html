@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>居中</title>
+		<style type="text/css">
+			/*基础样式*/
+			html{ margin: 0; }
+			.layout{ width: 200px; height: 200px; display: inline-block; margin: 20px; overflow: hidden; }
+			.wrap{ background-color: deepskyblue; height: 200px; width: 200px;}
+			.content{ background-color: deeppink; height: 100px; width: 100px;}
+			
+			/*水平居中(margin: 0 auto;)*/
+			.content1{ margin: 0 auto; }
+			
+			/*水平居中(text-align: center;)*/
+			.wrap2{ text-align: center; }
+			.content2{ display: inline-block; }
+			
+			/*水平居中(弹性盒子)*/
+			.wrap3{ display: flex; justify-content: center; }
+			
+			/*垂直居中(弹性盒子)*/
+			.wrap4{ display: flex; align-items: center; }
+			
+			/*垂直居中(弹性盒子改变主轴方向)*/
+			.wrap5{ display: flex; flex-direction: column;/*主轴方向设为垂直方向*/ justify-content: center;/*主轴方向上的元素的对齐方式*/ }
+			
+			/*水平垂直居中(定位+{margin: auto})*/
+			.wrap6{ position: relative; }
+			.content6{ position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; }
+			
+			/*水平垂直居中(定位+负margin)*/
+			.wrap7{ position: relative; }
+			.content7{ position: absolute; left: 50%; top: 50%; margin-left: -50px; margin-top: -50px; }
+		
+			/*水平垂直居中(弹性盒子)*/
+			.wrap8{ display: flex; justify-content: center; align-items: center; }
+			
+			/*水平垂直居中(弹性盒子+margin)*/
+			.wrap9{ display: flex; }
+			.content9{ margin: auto;}
+			
+			/*水平垂直居中(定位+transform)*/
+			.wrap10{ position: relative; }
+			.content10{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+		
+			/*水平垂直居中(表格样式)*/
+			.wrap11{ display: table-cell; vertical-align: middle; text-align: center;}
+			.content11{display: inline-block; }
+		</style>
+	</head>
+	<body>
+		<div class="layout">
+			<div class="wrap">
+				<div class="content">基础代码</div>
+			</div>
+		</div>
+		<div class="layout">
+			<div class="wrap wrap1">
+				<div class="content content1">水平居中(margin: 0 auto;)</div>
+			</div>
+		</div>
+		<div class="layout">
+			<div class="wrap wrap2">
+				<div class="content content2">水平居中(text-align: center;)</div>
+			</div>
+		</div>
+		<div class="layout">
+			<div class="wrap wrap3">
+				<div class="content content3">水平居中(弹性盒子)</div>
+			</div>
+		</div>
+		<div class="layout">
+			<div class="wrap wrap4">
+				<div class="content content4">垂直居中(弹性盒子)</div>
+			</div>
+		</div>
+		<div class="layout">
+			<div class="wrap wrap5">
+				<div class="content content5">垂直居中(弹性盒子改变主轴方向)</div>
+			</div>
+		</div>
+		<div class="layout">
+			<div class="wrap wrap6">
+				<div class="content content6">水平垂直居中(定位+{margin: auto})</div>
+			</div>
+		</div>
+		<div class="layout">
+			<div class="wrap wrap7">
+				<div class="content content7">水平垂直居中(定位+负margin)</div>
+			</div>
+		</div>
+		<div class="layout">
+			<div class="wrap wrap8">
+				<div class="content content8">水平垂直居中(弹性盒子)</div>
+			</div>
+		</div>
+		<div class="layout">
+			<div class="wrap wrap9">
+				<div class="content content9">水平垂直居中(弹性盒子+margin)</div>
+			</div>
+		</div>
+		<div class="layout">
+			<div class="wrap wrap10">
+				<div class="content content10">水平垂直居中(定位+transform)</div>
+			</div>
+		</div>
+		<div class="layout">
+			<div class="wrap wrap11">
+				<div class="content content11">水平垂直居中(表格样式)</div>
+			</div>
+		</div>		
+	</body>
+</html>

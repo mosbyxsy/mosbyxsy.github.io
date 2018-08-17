@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>两栏布局-BFC</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				height: 100%;
+			}
+			.left{
+				float: left;
+				width: 200px;
+				background-color: deepskyblue;
+			}
+			.right{
+				overflow: hidden;
+				background-color: deeppink;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="left">左边内容</div>
+		<div class="right">右边内容</div>
+	</body>
+</html>
