@@ -4,9 +4,9 @@
 
 React由Facebook在2013年5月开源，是用于构建用户界面的javaScript库。
 
-[React官网](https://reactjs.org/)
-[React中文文档](https://react.docschina.org/)
-[React入门](https://segmentfault.com/a/1190000012921279)
+- [React官网](https://reactjs.org/)
+- [React中文文档](https://react.docschina.org/)
+- [React入门](https://segmentfault.com/a/1190000012921279)
 
 ## react中核心概念
 
@@ -401,7 +401,7 @@ import PropTypes from 'prop-types';
 
 Component.propTypes = {
     name: PropTypes.string，
-    children: PropTypes.element//限制传递一个React元素
+    children: PropTypes.element // 限制传递一个React元素
 };
 ```
 
@@ -458,7 +458,7 @@ class MyComponent extends React.Component {
         return <div ref={this.refsDiv} />;
     }
 }
-或
+// 或
 class MyComponent extends React.Component {
     constructor(props) {
         super(props);
@@ -544,7 +544,7 @@ Context通过组件树提供了一个传递数据的方法，从而避免了在�
 const ThemeContext = React.createContext('light');
 
 function ThemedButton(props) {
-  // ThemedButton 组件从 context 接收 theme
+  // ThemedButton组件从context接收theme
     return (
         <ThemeContext.Consumer>
             {theme => <Button {...props} theme={theme} />}
@@ -577,7 +577,7 @@ const PropTypes = require('prop-types');
 class Button extends React.Component {
     render() {
         return (
-            <button style={{background: this.context.color}}>{/* 得到传递的数据 */}
+            <button style={{background: this.context.color}}> {/* 得到传递的数据 */}
                 {this.props.children}
             </button>
         );
@@ -599,7 +599,7 @@ class Message extends React.Component {
 }
 
 class MessageList extends React.Component {
-    getChildContext() {// 返回Context的数据
+    getChildContext() { // 返回Context的数据
         return {color: "purple"};
     }
 
