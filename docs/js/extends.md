@@ -21,6 +21,7 @@ var animal = new Animail()
 原型链最高指向Object.prototype并最终指向null
 
 原型图：
+
 ![原型图](./img/extends.jpg)
 
 举例说明1：
