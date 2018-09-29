@@ -2,7 +2,7 @@
 
 *创建于：2018-09-29；更新于：2018-09-29*
 
-## prototype与__pro__
+## prototype与`__pro__`
 
 ```javascript
 // 构造函数
@@ -21,7 +21,7 @@ var animal = new Animail()
 原型链最高指向Object.prototype并最终指向null
 
 原型图：
-!["原型图"](https://images2015.cnblogs.com/blog/1030655/201610/1030655-20161031041705971-1605480841.jpg)
+![原型图](./img/extends.jpg)
 
 举例说明1：
 ```javascript
