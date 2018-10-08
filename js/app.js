@@ -3,7 +3,7 @@
 	var minCenter = 1200;
 	var catalogue = [];//菜单目录
 	var deviceWidth, asideWidth;
-	var admin = false;
+	var admin = true;
 	//判断是移动端还是pc端
 	function isPC () {
 		if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
