@@ -2,7 +2,7 @@
 
 *创建于：2018-09-29；更新于：2018-09-29*
 
-## prototype与`__pro__`
+## prototype与`__proto__`
 
 ```javascript
 // 构造函数
@@ -10,7 +10,7 @@ function Animal () {}
 // 实例对象
 var animal = new Animail() 
 ```
-其中`Animal`是一个构造函数(同时也是一个对象)，具有prototype属性（原型），访问原型对象；`animal`是构造函数`Animal`的实例对象，具有__proto__属性，也是原型对象的指针；则`animal.___proto__ = Animal.prototype`,即：
+其中`Animal`是一个构造函数(同时也是一个对象)，具有prototype属性（原型），访问原型对象；`animal`是构造函数`Animal`的实例对象，具有`__proto__`属性，也是原型对象的指针；则`animal.__proto__ = Animal.prototype`,即：
 - `prototype`是构造函数访问原型对象的属性
 - `__proto__`是实例对象访问原型对象的属性（不可枚举）
 
@@ -106,7 +106,7 @@ isPrototypeOf方法用于测试一个对象是否存在于另一个对象的原�
 
 ```javascript
 function Animal (name) {
-    this.name = name || "Animal";
+    this.name = name;
     this.data = [];
 }
 Animal.prototype.myName = function () {
@@ -124,8 +124,8 @@ dog1.data //["dog1"]
 dog2.data //["dog1"]
 dog1.color // "yellow"
 dog2.color // "gray"
-dog1.myName() //underfined
-dog2.myName() //underfined
+dog1.myName() //name underfined
+dog2.myName() //name underfined
 dog1 instanceof Dog //true
 dog1 instanceof Animal //true
 ```
@@ -411,5 +411,5 @@ dog.sayHello(); //"dog", "狗"
 ## 参考文章
 
 1. [JS实现继承的几种方式](https://www.cnblogs.com/humin/p/4556820.html)
-2. [JS中原型链中的prototype与_proto_的个人理解与详细总结](https://www.cnblogs.com/libin-1/p/6014925.html)
+2. [JS中原型链中的prototype与`_proto_`的个人理解与详细总结](https://www.cnblogs.com/libin-1/p/6014925.html)
 3. [js中的instanceof运算符](https://www.cnblogs.com/SourceKing/p/5766210.html)
