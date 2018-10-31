@@ -46,6 +46,7 @@
 					catalogue.push(hash.substr(1));
 				}
 		   	});
+		   	console.log(catalogue);
 		   	if (hash) {
 		   		if (hash === "mosby") {
 		   			window.location.hash = "#" + catalogue[0];
