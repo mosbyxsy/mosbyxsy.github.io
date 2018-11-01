@@ -36,7 +36,7 @@
 	1. [MarkDown语法](#docs/markdown/markdownRule)
 	1. [MarkDown解析及高亮](#docs/markdown/markdownPlug)
 1. [在线工具](#)
-	1. [颜色对照表](#)
+	1. [颜色对照表](#docs/tool/color)
 	1. [颜色选择工具](#)
 	1. [表格与json互相转化](#docs/tool/xlsToJson)
 1. [编辑器](#)

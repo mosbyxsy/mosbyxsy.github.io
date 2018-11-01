@@ -6,8 +6,8 @@
 
 表格转化成json：表头转化为json数据的key，内容转化为json数据的value；
 
-[工具](./tool/xlsToJson.html)
+[工具](./tool/jsonAndXls/xlsToJson.html)
 
 json转化成表格：key转化为表格的表头，value转化为表格的内容；
 
-[工具](./tool/jsonToXls.html)
+[工具](./tool/jsonAndXls/jsonToXls.html)

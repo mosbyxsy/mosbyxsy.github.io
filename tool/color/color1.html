@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>颜色对照表1</title>
+		<script src="./color.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			#table {
+			    margin: 30px auto;
+			    border-collapse: collapse;
+			    border: none;
+			}
+			#table td {
+			    width: 200px;
+			    padding: 10px 15px;
+			}
+			#table .title {
+			    font-size: 26px;
+			    padding-bottom: 10px;
+			}
+			#tbody td {
+			    cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+	    <table id="table" border="1" cellspacing="0" cellpadding="0">
+	        <caption class="title">颜色对照表1</caption>
+	        <thead>
+	            <tr>
+                    <td>颜色图示</td>
+                    <td>英文名称</td>
+                    <td>颜色名称</td>
+                    <td>HEX格式</td>
+                    <td>RGB格式</td>
+                </tr>
+	        </thead>
+	    	<tbody id="tbody"></tbody>
+	    </table>
+	    <script type="text/javascript">
+	    	var tdList = color && color.map(function (item, index) {
+	    	    return '<tr> <td style="background-color:' + item.hex + '"></td> <td>' + item.en + '</td> <td>' + item.cn + '</td> <td>' + item.hex + '</td> <td>' + item.rgb + '</td> </tr>'
+	    	});
+	    	$('#tbody').html(tdList);
+	    	$('#tbody tr').find('td:not(:first)').click(function () {
+                console.log($(this).text());
+            });
+	    </script>
+	</body>
+</html>
