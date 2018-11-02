@@ -5,6 +5,7 @@
 		<title>颜色对照表2</title>
 		<script src="./color2.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/copy.js" type="text/javascript" charset="utf-8"></script>
 		<style type="text/css">
 			#table {
 			    margin: 30px auto;
@@ -43,7 +44,7 @@
 	    	});
 	    	$('#tbody').html(tdList);
 	    	$('#tbody tr').find('td:not(:first)').click(function () {
-	    	    console.log($(this).text());
+	    	    copy($(this).text());
 	    	});
 	    </script>
 	</body>

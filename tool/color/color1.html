@@ -3,8 +3,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>颜色对照表1</title>
-		<script src="./color.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./color1.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/copy.js" type="text/javascript" charset="utf-8"></script>
 		<style type="text/css">
 			#table {
 			    margin: 30px auto;
@@ -39,12 +40,12 @@
 	    	<tbody id="tbody"></tbody>
 	    </table>
 	    <script type="text/javascript">
-	    	var tdList = color && color.map(function (item, index) {
+	    	var tdList = color1 && color1.map(function (item, index) {
 	    	    return '<tr> <td style="background-color:' + item.hex + '"></td> <td>' + item.en + '</td> <td>' + item.cn + '</td> <td>' + item.hex + '</td> <td>' + item.rgb + '</td> </tr>'
 	    	});
 	    	$('#tbody').html(tdList);
 	    	$('#tbody tr').find('td:not(:first)').click(function () {
-                console.log($(this).text());
+                copy($(this).text());
             });
 	    </script>
 	</body>
