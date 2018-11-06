@@ -42,6 +42,7 @@
 1. [编辑器](#)
 	1. [web常用IDE(编辑器)](#docs/ide/ide)
 	1. [vim使用](#docs/ide/vim)
+	1. [Sublime text快捷键](#docs/ide/sublime)
 1. [杂类](#)
 	1. [常用软件](#docs/other/software)
 	1. [常用语区别及理解](#docs/other/keyword)
