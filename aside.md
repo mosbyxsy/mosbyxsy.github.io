@@ -37,7 +37,7 @@
 	1. [MarkDown解析及高亮](#docs/markdown/markdownPlug)
 1. [在线工具](#)
 	1. [颜色对照表](#docs/tool/color)
-	1. [颜色选择工具](#)
+	1. [颜色选择器](#docs/tool/selectColor)
 	1. [表格与json互相转化](#docs/tool/xlsToJson)
 1. [编辑器](#)
 	1. [web常用IDE(编辑器)](#docs/ide/ide)
@@ -46,6 +46,7 @@
 	1. [常用软件](#docs/other/software)
 	1. [常用语区别及理解](#docs/other/keyword)
 	1. [谷歌浏览器快捷键](#docs/other/googleShorcut)
+	1. [移动端调试](#docs/other/mobileDebug)
 	
 ## 其他
 1. [声明](#docs/statement)
