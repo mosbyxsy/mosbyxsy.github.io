@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>jscolor颜色选择器</title>
+    <script src="js/jscolor.js"></script>
+    <style type="text/css">
+   	    .item {
+   	        margin: 30px;
+   	    }
+    </style>
+</head>
+<body style="text-align:center;">
+    <div class="item">Color: <input class="jscolor" value="ab2567"/></div>
+    <div class="item">
+        <button class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}">颜色选择</button>
+        HEX value: <input id="chosen-value" value="000000">
+    </div>
+    <div class="item">来自：<a href="http://jscolor.com/">http://jscolor.com/</a></div>
+    <script>
+    function setTextColor(picker) {
+        document.getElementById("chosen-value").style.borderColor = '#' + picker.toString()
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>	
+    <title>ColorPicker颜色选择器</title>
+    <link rel="stylesheet" href="css/colorpicker.css" type="text/css" />
+	<script src="../../../js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/colorpicker.js"></script>
+	<style type="text/css">
+		#colorSelector {
+			width: 36px;
+			height: 36px;
+		}
+		#colorSelector div {
+			background: url("images/select.png");
+			width: 36px;
+			height: 36px;
+		}
+		.wrapper {
+			width: 350px;
+			margin: 20px auto;
+		}
+	</style>
+</head>
+<body>
+    <div class="wrapper">
+		<p>color1:<input type="text" maxlength="6" size="6" id="colorpickerField1" value="00ff00" /></p>
+		<p>color2:<input type="text" maxlength="6" size="6" id="colorpickerField3" value="0000ff" /></p>
+		<p>color3:<input type="text" maxlength="6" size="6" id="colorpickerField2" value="ff0000" /></p>
+		<p>
+			<div id="colorSelector"><div style="background-color: #0000ff"></div></div>
+		</p>
+		<p>来自：<a href="https://www.eyecon.ro/colorpicker/">https://www.eyecon.ro/colorpicker/</a></p>
+    </div>
+    <script>
+    	$('#colorpickerField1, #colorpickerField2, #colorpickerField3').ColorPicker({
+			onSubmit: function(hsb, hex, rgb, el) {
+				$(el).val(hex);
+				$(el).ColorPickerHide();
+			},
+			onBeforeShow: function () {
+				$(this).ColorPickerSetColor(this.value);
+			}
+		})
+		.bind('keyup', function(){
+			$(this).ColorPickerSetColor(this.value);
+		});
+		$('#colorSelector').ColorPicker({
+			color: '#0000ff',
+			onShow: function (colpkr) {
+				$(colpkr).fadeIn(500);
+				return false;
+			},
+			onHide: function (colpkr) {
+				$(colpkr).fadeOut(500);
+				return false;
+			},
+			onChange: function (hsb, hex, rgb) {
+				$('#colorSelector div').css('backgroundColor', '#' + hex);
+			}
+		});
+    </script>
+</body>
+</html>

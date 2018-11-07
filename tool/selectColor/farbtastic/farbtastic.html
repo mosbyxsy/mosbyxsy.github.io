@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>farbtastic颜色选择器</title>
+    <script src="../../../js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="farbtastic.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="farbtastic.css"/>
+    <style type="text/css">
+        .color-box {
+            text-align: center;
+            vertical-align: bottom;
+        }
+        .form-color {
+            width: 250px;
+            display: inline-block;
+        }
+        #picker, #picker2{
+            margin: 10px auto;
+            width: 195px;
+        }
+        .link-url {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="color-box">
+    		<form class="form-color">
+            <div class="form-item">
+                <label for="color">Color:</label>
+                <input type="text" id="color" name="color" value="#123456" />
+            </div>
+            <div id="picker"></div>
+        </form>
+        <form class="form-color">
+            <div class="form-item"><label for="color1">Color 1:</label><input type="text" id="color1" name="color1" class="colorwell" value="#123456" /></div>
+            <div class="form-item"><label for="color2">Color 2:</label><input type="text" id="color2" name="color2" class="colorwell" value="#123456" /></div>
+            <div class="form-item"><label for="color3">Color 3:</label><input type="text" id="color3" name="color3" class="colorwell" value="#123456" /></div> 
+            <div id="picker2"></div>
+        </form>
+    </div>
+    <p class="link-url">来自：<a href="http://acko.net/blog/farbtastic-jquery-color-picker-plug-in/">http://www.acko.net/</a>.</p>
+    <script type="text/javascript" charset="utf-8">
+        $('#picker').farbtastic('#color');
+        var f = $.farbtastic('#picker2');
+        var selected;
+        $('.colorwell')
+            .each(function () { f.linkTo(this); $(this).css('opacity', 0.75); })
+            .focus(function() {
+                if (selected) {
+                    $(selected).css('opacity', 0.75).removeClass('colorwell-selected');
+                }
+                f.linkTo(this);
+                $(selected = this).css('opacity', 1).addClass('colorwell-selected');
+            });        
+        $(".colorwell:last").css('opacity', 1);
+    </script>
+</body>
+</html>
