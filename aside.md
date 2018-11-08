@@ -48,6 +48,7 @@
 	1. [常用语区别及理解](#docs/other/keyword)
 	1. [谷歌浏览器快捷键](#docs/other/googleShorcut)
 	1. [移动端调试](#docs/other/mobileDebug)
+	1. [页面渲染](#docs/other/rander)
 	
 ## 其他
 1. [声明](#docs/statement)
