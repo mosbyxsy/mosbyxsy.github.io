@@ -1,6 +1,6 @@
 # react
 
-*创建于：2018-08-17；更新于：2018-09-5*
+*创建于：2018-08-17；更新于：2018-11-15*
 
 React由Facebook在2013年5月开源，是用于构建用户界面的javaScript库。
 
@@ -56,30 +56,32 @@ React基于两点假设，实现了一个O(n)算法：
 作用：创建React元素（虚拟DOM）
 
 使用方法：React.createElement(element, [props], [...children]);
-参数1： 元素名称(包括原生Dom元素名称和自定义React元素名称[需要在之前就定义])
-参数2： 属性对象(null表示没有)
-参数3： 当前元素的子元素string||createElement()的返回值
+- 参数1： 元素名称(包括原生Dom元素名称和自定义React元素名称[需要在之前就定义])
+- 参数2： 属性对象(null表示没有)
+- 参数3： 当前元素的子元素string||createElement()的返回值
 
 ### ReactDOM.render
 
 作用：挂载（渲染）虚拟DOM到页面（需要引入react-dom）
 
 使用方法：ReactDOM.render(element, document.getElementById('app'), callback);
-参数1：虚拟DOM（React元素）
-参数2：Dom(挂载点，表示渲染到哪里)
-参数3：回调函数
+- 参数1：虚拟DOM（React元素）
+- 参数2：Dom(挂载点，表示渲染到哪里)
+- 参数3：回调函数
 
 ### ReactDOM.unmountComponentAtNode
 
 作用：从DOM节点卸载React组件
 
 使用方法：ReactDOM.unmountComponentAtNode(document.getElementById('app'));
-参数： 组件卸载的DOM节点
+- 参数： 组件卸载的DOM节点
 
 ### forceUpdate
 
 作用：强制重新触发渲染(更新)
+
 使用方法：this.forceUpdate(callback);
+
 调用forceUpdate()将会导致组件的render()方法被调用，并忽略shouldComponentUpdate()。这将会触发每一个子组件的生命周期方法，涵盖每个子组件的shouldComponentUpdate()方法
 
 ### React.cloneElement
@@ -87,7 +89,9 @@ React基于两点假设，实现了一个O(n)算法：
 作用：克隆React元素，类似createElement
 
 使用方法：React.cloneElement(element,[props],[...children]);
+
 以element作为起点，克隆并返回一个新的React元素
+
 说明：
 - 生成的元素将会拥有原始元素props与新props的浅合并
 - 新的子级会替换现有的子级
