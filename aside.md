@@ -50,7 +50,7 @@
 	1. [移动端调试](#docs/other/mobileDebug)
 	1. [页面渲染](#docs/other/rander)
 	1. [模板插入JS](#docs/other/jsInsertTemplate)
-	1. [console方法](#docs/other/consoleFun)
+	1. [console方法](#docs/other/console)
 	1. [console自带Api](#docs/other/consoleApi)
 	
 ## 其他
