@@ -27,6 +27,7 @@
 	1. [live2d网页插入动画](#docs/canvas/live2d)
 1. [前端自动化](#)
 	1. [node与npm](#docs/auto/nodeAndNpm)
+	1. [开发环境配置](#docs/auto/nodeEnv)
 1. [布局](#)
 	1. [移动端高清布局](#docs/layout/highDefinition)
 1. [Windows](#)
