@@ -28,7 +28,7 @@
 1. [前端自动化](#)
 	1. [node与npm](#docs/auto/nodeAndNpm)
 	1. [开发环境配置](#docs/auto/nodeEnv)
-	1. [React热更新篇日志](#docs/auto/reactHot)
+	1. [React热更新配置](#docs/auto/reactHot)
 1. [布局](#)
 	1. [移动端高清布局](#docs/layout/highDefinition)
 1. [Windows](#)
