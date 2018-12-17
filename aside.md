@@ -23,6 +23,7 @@
 	1. [继承与原型](#docs/js/extends)
 	1. [数组过滤](#docs/js/arrayFilter)
 	1. [数组去重](#docs/js/arrayUnique)
+	1. [操作符](#docs/js/operator)
 1. [图表与动画](#)
 	1. [live2d网页插入动画](#docs/canvas/live2d)
 1. [前端自动化](#)
