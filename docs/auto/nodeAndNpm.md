@@ -1,6 +1,6 @@
 # node与npm
 
-*创建于：2018-08-17；更新于：2018-08-17*
+*创建于：2018-08-17；更新于：2018-12-28*
 
 ## node介绍及安装
 
@@ -51,7 +51,7 @@ NVM是一个可以让你在同一台机器上安装和切换不同版本node的�
 
 ## npm命令
 
-以下是一些常用的npm命令，具体可以查看[官网说明](https://docs.npmjs.com/)
+以下是一些常用的npm命令，访问[npm常用命令](#docs/auto/npm)查看更多命令，具体可以查看[官网说明](https://docs.npmjs.com/)。
 - `npm help cmd` 查看命令说明及使用方法
 - `npm init` 初始化一个package.json文件
 - `npm install/i [pkg] [-g]` 安装
