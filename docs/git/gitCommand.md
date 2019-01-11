@@ -125,6 +125,7 @@ git revert commitid #撤销指定commitid提交
 ### checkout
 
 ```
+git checkout - #返回上一个分支
 git checkout -- file #取消工作区文件修改
 git checkout -- . #取消工作的所有文件修改
 git checkout HEAD^ file #从上一个版本库的文件修改取出到工作空间
