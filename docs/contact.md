@@ -1,8 +1,6 @@
 # 联系方式
 
-- QQ：2534645860
-
-- email：2534645860@qq.com
+- Email：2534645860@qq.com
 
 - [博客园](http://www.cnblogs.com/mosby)、[知乎](https://www.zhihu.com/people/mosbyxsy)、[GitHub](https://github.com/mosbygit)
 
