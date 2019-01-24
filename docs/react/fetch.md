@@ -2,7 +2,7 @@
 
 *创建于：2019-01-24；更新于：2019-01-24*
 
-前端数据请求从XMLHttpRequest(XHR)，发展到Qquery ajax(基于原生XHR的封装，支持jsonp)，再到fetch，Axios(Axios本质上也是对原生XHR的封装，只不过它是Promise的实现版本)；fetch也是原生API，基于Promise设计的，但存在兼容性问题，需要一系列polyfill；
+前端数据请求从XMLHttpRequest(XHR)，发展到Jquery ajax(基于原生XHR的封装，支持jsonp)，再到fetch，Axios(Axios本质上也是对原生XHR的封装，只不过它是Promise的实现版本)；fetch也是原生API，基于Promise设计的，但存在兼容性问题，需要一系列polyfill；
 
 ## 使用方法
 
