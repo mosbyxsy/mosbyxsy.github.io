@@ -9,9 +9,9 @@ mobx是一个简单，可扩展的状态管理库，通常用于结合react一�
 - mobx的核心思想是，状态变化引起的副作用应该被自动触发
 - 对比redux，mobx学习成本更低，对性能优化更友好
 - mobx与react结合使用，需要引入mobx-react库
-- mobx5.x与4.x版本api基本一致，5.x版本运行在任何支持 ES6 proxy 的浏览器，而4.x可以运行在任何支持 ES5 的浏览器
+- mobx5.x与4.x版本api基本一致，5.x版本运行在任何支持 ES6 proxy 的浏览器，而4.x可以运行在任何支持 ES5的浏览器
 ```javascript
-// 如果使用webpack进行打包，可以直接引用es6包(MobX 5 包的主入口点附带 ES5 代码，以便向后兼容所有构建工具)
+// 如果使用webpack进行打包，可以直接引用es6包(MobX 5包的主入口点附带 ES5代码，以便向后兼容所有构建工具)
 resolve: { alias: { mobx: __dirname + "/node_modules/mobx/lib/mobx.es6.js" }}
 ```
 
