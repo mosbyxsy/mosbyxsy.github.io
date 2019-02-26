@@ -1,6 +1,6 @@
 # mobx
 
-*创建于：2019-01-17；更新于：2019-01-20*
+*创建于：2019-01-17；更新于：2019-02-26*
 
 mobx是一个简单，可扩展的状态管理库，通常用于结合react一起使用,[【demo】](https://github.com/mosbyxsy/mobx-react-base/)
 
@@ -95,7 +95,6 @@ export default observe(Test);
 import React, {Componnet} from 'react';
 import {observe, inject} from 'mobx-react';
 
-// 使用 修饰器
 @inject('foo') @observe
 class Test extends Componnet {
   render() {
@@ -112,9 +111,10 @@ class Test extends Componnet {
     const {foo} = this.props;
   }
 }
+// 注意顺序
 export default compose(
-  observe,
-  inject('foo')
+  inject('foo'),
+  observe
 )(Test)
 ```
 
@@ -150,7 +150,7 @@ class Store {
 }
 ```
 
-只有对象中已经存在的对象才能够被观察，如果徐娅添加则：
+只有对象中已经存在的对象才能够被观察，如果需要添加则：
 ```javascript
 let observableObject = observable({value: 3222});
 
