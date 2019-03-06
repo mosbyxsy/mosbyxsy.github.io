@@ -35,6 +35,7 @@
 	1. [React热更新配置](#docs/auto/reactHot)
 	1. [gulp执行顺序](#docs/auto/gulpSequence)
 	1. [npm常用命令](#docs/auto/npm)
+	1. [npx](#docs/auto/npx)
 1. [布局](#)
 	1. [移动端高清布局](#docs/layout/highDefinition)
 1. [Windows](#)
