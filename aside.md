@@ -29,7 +29,7 @@
 	1. [操作符](#docs/js/operator)
 1. [图表与动画](#)
 	1. [live2d网页插入动画](#docs/canvas/live2d)
-1. [前端自动化](#)
+1. [配置及工具](#)
 	1. [node与npm](#docs/auto/nodeAndNpm)
 	1. [开发环境配置](#docs/auto/nodeEnv)
 	1. [React热更新配置](#docs/auto/reactHot)
