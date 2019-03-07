@@ -1,6 +1,6 @@
 # npm命令
 
-*创建于：2018-12-10；更新于：2018-12-10*
+*创建于：2018-12-10；更新于：2019-03-08*
 
 npm常用命令(使用`npm -l`查看)及说明：
 - npm install/i npm@latest -g //升级全局npm
@@ -53,7 +53,6 @@ npm常用命令(使用`npm -l`查看)及说明：
     postrestart：运行npm restart命令后执行
     ```
 - npm link //生成全局符号链接
-- npm link //生成链接全局的符号链接
 - npm adduser //在npmjs.com注册一个用户
 - npm login //登录
 - npm publish //发布
@@ -61,3 +60,6 @@ npm常用命令(使用`npm -l`查看)及说明：
 - npm repo $modules //打开一个模块的代码仓库，不一定要安装
 - npm prune //显示没有在package.json中记录的已安装模块 
 - npm shrinkwrap //锁定当前项目的依赖模块的版本,生成npm-shrinkwrap.json
+- npm home $modules //打开模块首页
+- npm repo $modules //打开仓库地址
+
