@@ -1,6 +1,6 @@
 # yarn
 
-yarn是一个与npm类似的包管理工具，它的诞生主要是为了解决npm的不足(现在也优化了)；
+yarn(Facebook, Google, Exponent 和 Tilde 开发的)是一个与npm类似的包管理工具，它的诞生主要是为了解决npm的不足(现在也优化了)；
 
 ## yarn特点
 
@@ -9,7 +9,7 @@ yarn是一个与npm类似的包管理工具，它的诞生主要是为了解决n
 - 由yarn.lock(会自动更新)文件来实现依赖包的版本精准控制
 - 优化下载命令行提示
 
-yarn这些特点，在最新版本的npm上也得到了优化，并且yarn使用的是npm，bower的源；
+yarn这些特点，在最新版本的npm上也得到了优化，并且yarn使用的是npm的源；
 
 ## yarn与npm命令行对比
 
@@ -23,4 +23,9 @@ yarn这些特点，在最新版本的npm上也得到了优化，并且yarn使用
 - `npm run [script]` / `yarn run [script]` 运行脚本
 - `npm cache clean` / `yarn cache clean` 清除缓存
 - `npm uninstall <package> [–S/–D]` / `yarn remove <package>` 卸载
+
+## 传送门
+
+[Npm vs Yarn 之备忘大全](https://www.jeffjade.com/2017/12/30/135-npm-vs-yarn-detial-memo/)
+
 
