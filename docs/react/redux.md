@@ -1,6 +1,6 @@
 # redux
 
-*创建于：2019-02-26；更新于：2019-02-26*
+*创建于：2019-02-26；更新于：2019-03-22*
 
 Redux是JavaScript状态管理库， 提供可预测化的状态管理[demo](https://github.com/mosbyxsy/redux-base)，能够与react结合高效的进行项目开发，也可以用于支持其他UI库；提供强大的可用于扩展的中间件机制；
 
@@ -64,7 +64,7 @@ combineReducers()所做的只是生成一个函数，这个函数来调用你的
 
 ## react-redux
 
-redux和react结合使用(需要使用react-redux[demo](https://github.com/mosbyxsy/redux-base))，redux负责全局数据的管理，redux负责局部状态的管理和UI的渲染；
+redux和react结合使用(需要使用react-redux[demo](https://github.com/mosbyxsy/redux-base))，react负责全局数据的管理，redux负责局部状态的管理和UI的渲染；
 
 其中需要在根组件中传入store
 
