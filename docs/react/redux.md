@@ -4,7 +4,7 @@
 
 Redux是JavaScript状态管理库， 提供可预测化的状态管理[demo](https://github.com/mosbyxsy/redux-base)，能够与react结合高效的进行项目开发，也可以用于支持其他UI库；提供强大的可用于扩展的中间件机制；
 
-# redux三大原则
+## redux三大原则
 
 - 单一数据源
 - state是只读的，能改变state的唯一方式是通过触发action来修改
