@@ -65,6 +65,7 @@
 	1. [删除node_modules](#docs/other/rmModules)
 	1. [页面跳转的思考](#docs/other/alink)
 	1. [个人所得税预扣](#docs/other/tax)
+	1. [win开机记录查询](#docs/other/winInfo)
 	
 ## 其他
 1. [声明](#docs/statement)
