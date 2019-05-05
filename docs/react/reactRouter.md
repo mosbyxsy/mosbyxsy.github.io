@@ -2,13 +2,29 @@
 
 *创建于：2018-08-17；更新于：2019-04-16*
 
+## 使用
+
+下面是react-router简单使用基本示例，详细示例请查看[demo]()
+
+### react-router 3.x
+
+### react-router 4.x
+
+## 3.x与4.x区别与注意点
+
+引用方式
+layout component
+
+
 ## 懒加载
 
 在开发大型应用时经常需要用到懒加载，缩短首屏时间，提高用户体验；
 
-本文主要介绍两种：
+本文主要介绍以下几种：
 - 自定义高阶组件进行按需加载
 - 使用react-loadable小工具库
+- 使用getComponent(仅限于3.x,[demo](https://github.com/mosbyxsy/react-lazy-loading-getcomponent))
+
 
 具体实现参考[demo](https://github.com/mosbyxsy/react-lazy-loading)
 
