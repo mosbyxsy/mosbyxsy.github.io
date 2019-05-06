@@ -1,5 +1,7 @@
 # for in和for of区别
 
+*创建于：2019-05-06；更新于：2019-05-06*
+
 `for in`和`for of`都是用于遍历数据，ES5具有遍历数组功能的还有map、forEach、filter、some、every、reduce、reduceRight等；
 
 其中使用forEach遍历数组，使用`break`不能中断循环，使用`return`也不能返回到外层函数。
