@@ -70,6 +70,7 @@
 	1. [个人所得税预扣](#docs/other/tax)
 	1. [win开机记录查询](#docs/other/winInfo)
 	1. [三次握手与四次挥手](#docs/other/tcp)
+	1. [github搜索](#docs/other/githubAnalyze)
 	
 ## 其他
 1. [声明](#docs/statement)
