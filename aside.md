@@ -11,6 +11,7 @@
 	1. [mobx](#docs/react/mobx)
 	1. [redux](#docs/react/redux)
 	1. [fetch](#docs/react/fetch)
+	1. [react缓存route](#docs/react/keepAlive)
 1. [Git相关操作](#)
 	1. [git常用命令](#docs/git/gitCommand)
 	1. [git撤销回滚](#docs/git/gitReset)
