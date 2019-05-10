@@ -1,6 +1,6 @@
 # redux
 
-*创建于：2019-02-26；更新于：2019-03-22*
+*创建于：2019-02-26；更新于：2019-05-10*
 
 Redux是JavaScript状态管理库， 提供可预测化的状态管理[demo](https://github.com/mosbyxsy/redux-base)，能够与react结合高效的进行项目开发，也可以用于支持其他UI库；提供强大的可用于扩展的中间件机制；
 
@@ -64,7 +64,7 @@ combineReducers()所做的只是生成一个函数，这个函数来调用你的
 
 ## react-redux
 
-redux和react结合使用(需要使用react-redux[demo](https://github.com/mosbyxsy/redux-base))，react负责全局数据的管理，redux负责局部状态的管理和UI的渲染；
+redux和react结合使用(需要使用react-redux[demo](https://github.com/mosbyxsy/redux-base))，redux负责全局数据的管理，react负责局部状态的管理和UI的渲染；
 
 其中需要在根组件中传入store
 
@@ -148,16 +148,80 @@ const createStoreWithMiddleware = applyMiddleware(logger)(createStore);
 export default createStoreWithMiddleware(rootReducers);
 ```
 
+### redux-thunk
+
+redux-thunk是redux作者给出的中间件，实现极为简单;
+
+```javascript
+function createThunkMiddleware(extraArgument) {
+  return ({ dispatch, getState }) => next => action => {
+    if (typeof action === 'function') {
+      return action(dispatch, getState, extraArgument);
+    }
+
+    return next(action);
+  };
+}
+
+const thunk = createThunkMiddleware();
+thunk.withExtraArgument = createThunkMiddleware;
+
+export default thunk;
+```
+
+当action为函数的时候，就调用这个函数，并传入dispatch, getState；react-thunk比较适合于简单的API请求的场景
+
+### redux-promise
+
+```javascript
+import { isFSA } from 'flux-standard-action';
+
+function isPromise(val) {
+  return val && typeof val.then === 'function';
+}
+
+export default function promiseMiddleware({ dispatch }) {
+  return next => action => {
+    if (!isFSA(action)) {
+      return isPromise(action)
+        ? action.then(dispatch)
+        : next(action);
+    }
+
+    return isPromise(action.payload)
+      ? action.payload.then(
+          result => dispatch({ ...action, payload: result }),
+          error => {
+            dispatch({ ...action, payload: error, error: true });
+            return Promise.reject(error);
+          }
+        )
+      : next(action);
+  };
+}
+```
+
+### redux-saga
+
+redux-saga是一个管理redux应用异步操作的中间件，用于代替 redux-thunk的。它通过创建 Sagas 将所有异步操作逻辑存放在一个地方进行集中处理，以此将react中的同步操作与异步操作区分开来，以便于后期的管理与维护。redux-saga中使用声明式的Effect以及提供了更加细腻的控制流，声明式的Effect使得redux-saga监听原始js对象形式的action，并且可以方便单元测试。
+
+redux-saga优点：
+
+- 统一action的形式，在redux-saga中，从UI中dispatch的action为原始对象
+- 集中处理异步等存在副作用的逻辑
+- 通过转化effects函数，可以方便进行单元测试
+- 完善和严谨的流程控制，可以较为清晰的控制复杂的逻辑。
+
 ## Redux DevTools(开发工具)
 
 可以安装浏览器插件`Redux DevTools`,在控制台进行redux调试([redux-devtools-extension](https://github.com/zalmoxisus/redux-devtools-extension)可选)；
 
 具体使用[demo](https://github.com/mosbyxsy/redux-base/blob/middleware/src/store.js)
 
-
 ## 参考
 
 - [redux下action的命名规范](https://segmentfault.com/a/1190000011511549#articleHeader10)
 - [redux-actions学习笔记](https://www.jianshu.com/p/d2615a7d725e)
 - [深入理解 Redux 中间件](https://www.jianshu.com/p/ae7b5a2f78ae)
-- [redux中间件的原理](http://www.cnblogs.com/wshiqtb/p/7909770.html)
+- [redux中间件的原理](https://www.cnblogs.com/wshiqtb/p/7909770.html)
+- [Redux-Saga入门](https://www.jianshu.com/p/05b73d826425)
