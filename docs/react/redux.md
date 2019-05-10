@@ -205,6 +205,8 @@ export default function promiseMiddleware({ dispatch }) {
 
 redux-saga是一个管理redux应用异步操作的中间件，用于代替 redux-thunk的。它通过创建 Sagas 将所有异步操作逻辑存放在一个地方进行集中处理，以此将react中的同步操作与异步操作区分开来，以便于后期的管理与维护。redux-saga中使用声明式的Effect以及提供了更加细腻的控制流，声明式的Effect使得redux-saga监听原始js对象形式的action，并且可以方便单元测试。
 
+[相关使用说明及api见redux-saga中文文档](https://redux-saga-in-chinese.js.org/docs/api/index.html)
+
 redux-saga优点：
 
 - 统一action的形式，在redux-saga中，从UI中dispatch的action为原始对象
