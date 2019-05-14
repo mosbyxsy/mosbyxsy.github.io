@@ -226,4 +226,4 @@ redux-saga优点：
 - [redux-actions学习笔记](https://www.jianshu.com/p/d2615a7d725e)
 - [深入理解 Redux 中间件](https://www.jianshu.com/p/ae7b5a2f78ae)
 - [redux中间件的原理](https://www.cnblogs.com/wshiqtb/p/7909770.html)
-- [Redux-Saga入门](https://www.jianshu.com/p/05b73d826425)
+- [彻彻底底教会你使用Redux-saga](https://github.com/forthealllight/blog/issues/14)
