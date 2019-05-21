@@ -53,6 +53,7 @@
 	1. [颜色对照表](#docs/tool/color)
 	1. [颜色选择器](#docs/tool/selectColor)
 	1. [表格与json互相转化](#docs/tool/xlsToJson)
+	1. [rgba去除透明](#docs/tool/rgbaTocolor)
 1. [编辑器](#)
 	1. [web常用IDE(编辑器)](#docs/ide/ide)
 	1. [vim使用](#docs/ide/vim)
