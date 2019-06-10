@@ -1,6 +1,6 @@
 # 继承与原型
 
-*创建于：2018-09-29；更新于：2018-09-29*
+*创建于：2018-09-29；更新于：2019-06-11*
 
 ## prototype与`__proto__`
 
@@ -407,6 +407,19 @@ class Dog extends Animal {
 let dog = new Dog("dog");
 dog.sayHello(); //"dog", "狗"
 ```
+
+## 注意
+
+- `typeof Function.prototype === 'function'`，但是`Function.prototype.__proto__ = Object.prototype`；
+- fun.bind和箭头函数没有prototype属性；
+- 先有Function还是先有Object的讨论：
+    ```javascript
+    Function instanceof Object // true
+    Object instanceof Function // true
+    Function instanceof Function // true
+    Object instanceof Object // true
+    // 浏览器底层实现Function和Object，并且使Function.prototype.__proto__ = Object.prototype,Object.prototype__proto__ = null
+    ```
 
 ## 参考文章
 
