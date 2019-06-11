@@ -227,9 +227,61 @@ swap([7, 'seven']); // ['seven', 7]
 - TypeScript 只会进行静态检查，如果发现有错误，编译的时候就会报错。
 - TypeScript 编译的时候即使报错了，还是会生成编译结果(可以配置中断编译)。
 
+## class和interface对比
+
+- Interface除了可以定义对象的形状，也可以定义函数，数组等的形状，而Class只能定义对象的形状；
+- Interface在打包后会被移除，但是Class会被转化成function保留；
+- Interface定义对象的属性和方法类型，Class可以实现对象的属性和方法；
+
+## interface和type对比
+
+interface和type既有相同点，又存在差异，优先选择interface实现；
+相同点：
+1. 都可以描述一个对象或者函数
+1. 都允许扩展(但是语法不同)
+    ```typescript
+    // interface extends interface
+        interface Name { 
+          name: string; 
+        }
+        interface User extends Name { 
+          age: number; 
+        }
+        
+    // type extends type
+        type Name = { 
+          name: string; 
+        }
+        type User = Name & { age: number  };
+    
+    // interface extends type
+        type Name = { 
+          name: string; 
+        }
+        interface User extends Name { 
+          age: number; 
+        }
+    
+    // type extends interface
+        interface Name { 
+          name: string; 
+        }
+        type User = Name & { 
+          age: number; 
+        }
+    ```
+
+不同点：
+1. type可以而 interface不行
+    - type 可以声明基本类型别名，联合类型，元组等类型
+    - type 语句中还可以使用 typeof 获取实例的 类型进行赋值
+1. interface可以而 type不行
+    - interface能够声明合并
+    
 ## 参考
 
 - [typescript官网](http://www.typescriptlang.org/)
 - [typescript中文文档](https://www.tslang.cn/index.html)
 - [typescript中文](https://zhongsp.gitbooks.io/typescript-handbook/content/)
 - [typescript入门教程](https://github.com/xcatliu/typescript-tutorial/blob/master/README.md)
+- [Typescript中的 interface和 type到底有什么区别](https://blog.csdn.net/weixin_33724659/article/details/88040828)
