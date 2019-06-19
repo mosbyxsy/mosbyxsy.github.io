@@ -36,7 +36,7 @@
 	1. [防抖和节流](#docs/js/debounceAndThrottle)
 1. [图表与动画](#)
 	1. [live2d网页插入动画](#docs/canvas/live2d)
-1. [配置及工具](#)
+1. [环境配置及项目搭建](#)
 	1. [node与npm](#docs/auto/nodeAndNpm)
 	1. [开发环境配置](#docs/auto/nodeEnv)
 	1. [React热更新配置](#docs/auto/reactHot)
