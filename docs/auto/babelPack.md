@@ -1,6 +1,6 @@
 # babel转换最新语法
 
-*创建于：2019-06-11；更新于：2018-06-11*
+*创建于：2019-06-11；更新于：2018-06-19*
 
 最新ES2015+的语法特性无法在所有浏览中得到统一的实现和兼容，往往需要转译成ES5语法；
 
@@ -162,3 +162,5 @@ npm i @babel/runtime-corejs2 -S
 - [关于babel 的一些包理解7.X版本](https://blog.csdn.net/weixiaoderensheng/article/details/82993332)
 - [Upgrade to Babel 7](https://babeljs.io/docs/en/v7-migration)
 - [Babel 7.1介绍 transform-runtime polyfill env](https://www.jianshu.com/p/d078b5f3036a)
+- [corejs与env、runtime的不解之缘](https://zhuanlan.zhihu.com/p/66790750)
+- [Babel 社区概览](https://juejin.im/post/5cb9833b6fb9a068a84fe4d0)
