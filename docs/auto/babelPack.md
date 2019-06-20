@@ -1,6 +1,6 @@
 # babel转换最新语法
 
-*创建于：2019-06-11；更新于：2018-06-19*
+*创建于：2019-06-11；更新于：2018-06-20*
 
 最新ES2015+的语法特性无法在所有浏览中得到统一的实现和兼容，往往需要转译成ES5语法；
 
@@ -91,7 +91,7 @@ module.exports = {
     [
         "@babel/env",
         {
-            corejs: 3, //2或者3
+            corejs: 3, 
             useBuiltIns: "entry"
         }
     ]
@@ -103,7 +103,7 @@ module.exports = {
     [
         "@babel/env",
         {
-            corejs: 3, //2或者3
+            corejs: 3, 
             useBuiltIns: "usage"
         }
     ]
@@ -134,13 +134,9 @@ npm i @babel/runtime -S // 注意这是生产依赖
 #### 作用：
 
 - 能够去除打包中重复引用的帮助函数，使用@babel/runtime中的helpers；
-- @babel/plugin-transform-runtime会为代码创建一个沙盒环境，不会污染全局变量；
+- @babel/plugin-transform-runtime会为代码创建一个沙盒环境，不会污染全局变量(在7.x版本中测试@babel/runtime只会引入帮助函数，不会提供Promise等新API)
 
-#### 问题：
-
-无法使用浏览器不兼容的实例api,比如`"foobar".includes("foo")`;
-
-#### 解决：使用@babel/runtime-corejs2代替@babel/runtime；
+#### 使用@babel/runtime-corejs2代替@babel/runtime；
 
 ```
 // 安装
@@ -151,7 +147,27 @@ npm i @babel/runtime-corejs2 -S
 }
 ```
 
-@babel/runtime-corejs2 ≈ @babel/runtime + @babel/polyfill
+@babel/runtime-corejs2会提供帮助函数(helpers),和新的API(如Promise，Map等)，但是无法使用浏览器不兼容的实例api,比如`"foobar".includes("foo")`;
+
+#### 结合使用
+
+为了兼容和减小对全局的污染，可以采用下面配置：
+
+```
+// 这种方法对全局还是有污染的，并且打包后体积会更大；
+{
+    "presets": [
+        ["@babel/preset-env",{
+            "targets": {
+                "ie": "9"
+            },
+            "corejs": 3,
+            "useBuiltIns": "usage"
+        }]
+    ],
+    "plugins": [["@babel/plugin-transform-runtime", {"corejs": 2}]]
+}
+```
 
 ## 参考
 
@@ -164,3 +180,27 @@ npm i @babel/runtime-corejs2 -S
 - [Babel 7.1介绍 transform-runtime polyfill env](https://www.jianshu.com/p/d078b5f3036a)
 - [corejs与env、runtime的不解之缘](https://zhuanlan.zhihu.com/p/66790750)
 - [Babel 社区概览](https://juejin.im/post/5cb9833b6fb9a068a84fe4d0)
+
+## 附录
+
+测试使用版本
+
+```
+{
+    "devDependencies": {
+        "@babel/cli": "^7.4.4",
+        "@babel/core": "^7.4.5",
+        "@babel/plugin-transform-runtime": "^7.4.4",
+        "@babel/preset-env": "^7.4.5",
+        "babel-loader": "^8.0.6",
+        "webpack": "^4.34.0",
+        "webpack-cli": "^3.3.4"
+    },
+    "dependencies": {
+        "@babel/runtime": "^7.4.5",
+        "@babel/runtime-corejs2": "^7.4.5",
+        "core-js": "^3.1.4",
+        "regenerator-runtime": "^0.13.2"
+    }
+}
+```
