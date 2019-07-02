@@ -27,6 +27,7 @@
 	1. [左右两栏布局](#docs/css/layoutTwo)
 	1. [元素居中](#docs/css/alignCenter)
 	1. [圣杯与双飞翼布局](#docs/css/layoutThree)
+	1. [flex布局](#docs/css/flex)
 1. [JavaScript](#)
 	1. [继承与原型](#docs/js/extends)
 	1. [数组过滤](#docs/js/arrayFilter)
