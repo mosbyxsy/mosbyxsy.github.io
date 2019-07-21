@@ -8,7 +8,16 @@
 
 ### react-router 3.x
 
+js跳转方法：
+- this.props.router.push;
+- 使用contextTypes,this.context.router.push;
+- import {hashHistory} from 'react-router';hashHistory.push；
+
 ### react-router 4.x
+
+js跳转方法：
+- this.props.history.push；
+- 使用contextTypes,this.context.router.history.push
 
 ## 3.x与4.x区别与注意点
 
