@@ -106,6 +106,19 @@ trackBy为接受一个带两个参数（index和item）的函数,自定义返回
 - 父组件调用子组件的时候，定义接收事件(`<app-header (outer)="runParent($event)"></app-header>`)
 - 事件触发父组件的方法，同时拿到子组件的数据(`runParent(){}`)
 
+## 生命周期
+
+[angular生命周期](https://www.angular.cn/guide/lifecycle-hooks)包括8个钩子函数，每个接口(接口是可选的)都有唯一的一个钩子方法。钩子在组件/指令创建，更新，销毁阶段执行，部分钩子只有组件才有；
+
+- ngOnChanges：当 Angular（重新）设置数据绑定输入属性时响应，首次调用一定会发生在 ngOnInit()之前；
+- ngOnInit：在Angular第一次显示数据绑定和设置指令/组件的输入属性之后，初始化指令/组件。在第一轮 ngOnChanges()完成之后调用，只调用一次。(发起请求，复杂的初始化逻辑)
+- ngDoCheck：检测，并在发生Angular无法或不愿意自己检测的变化时作出反应。在每个变更检测周期中，紧跟在 ngOnChanges()和ngOnInit()后面调用。
+- ngAfterContentInit：当Angular把外部内容投影进组件/指令的视图之后调用。第一次ngDoCheck()之后调用，只调用一次。
+- ngAfterContentChecked：每当Angular完成被投影组件内容的变更检测之后调用。ngAfterContentInit()和每次ngDoCheck()之后调用。
+- ngAfterViewInit：当Angular初始化完组件视图及其子视图之后调用。第一次 ngAfterContentChecked()之后调用，只调用一次。(Dom操作)
+- ngAfterViewChecked：每当Angular做完组件视图和子视图的变更检测之后调用。ngAfterViewInit()和每次ngAfterContentChecked()之后调用。
+- ngOnDestroy：每当Angular每次销毁指令/组件之前调用并清扫；
+
 ## 注意点
 
 ### 引入图片
