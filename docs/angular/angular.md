@@ -119,6 +119,169 @@ trackBy为接受一个带两个参数（index和item）的函数,自定义返回
 - ngAfterViewChecked：每当Angular做完组件视图和子视图的变更检测之后调用。ngAfterViewInit()和每次ngAfterContentChecked()之后调用。
 - ngOnDestroy：每当Angular每次销毁指令/组件之前调用并清扫；
 
+## Rxjs
+
+RxJS是ReactiveX 编程理念的JavaScript版本。ReactiveX来自微软，它是一种针对异步数据流的编程。它将一切数据，包括HTTP请求，DOM事件或者普通数据等包装成流的形式，然后用强大丰富的操作符对流进行处理，使你能以同步编程的方式处理异步数据，并组合不同的操作符来轻松优雅的实现你所需要的功能。
+
+RxJS是一种针对异步数据流编程工具。Angular引入内置RxJS。
+
+- [GitHub](https://github.com/ReactiveX/RxJS)
+- [中文文档](https://cn.rx.js.org/)
+
+```
+let stream = new Observable(observer => {
+    let count = 0;
+    setTimeout(() => {
+        observer.next(++count);
+    }, 2000);
+});
+// 订阅
+let disposable = stream.subscribe(value => console.log(value));
+// 取消订阅
+disposable.unsubscribe();
+// 使用工具方法(6.x版本与之前的使用方法不同)
+stream.pipe(
+    filter(val => val%2==0),
+    map(val => val*val)
+).subscribe(value => console.log(value));
+// 延迟执行
+import {Observable,fromEvent} from 'rxjs';
+import {map,filter,throttleTime} from 'rxjs/operators';
+let button = document.querySelector('button');
+fromEvent(button, 'click').pipe(
+    throttleTime(1000);
+) .
+subscribe(() => console.log(`Clicked`));
+```
+
+## HttpClient
+
+Angular内置HttpClientModule模块请求模块,也可以使用其他包装的请求，例如[axios](https://github.com/axios/axios)
+
+- 在根模块中引入并注入HttpClientModule(使用jsonp还需要HttpClientJsonpModule)
+    ```
+    import {HttpClientModule, HttpClientJsonpModule} from '@angular/common/http';
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        HttpClientJsonpModule
+    ]
+    ```
+- 在服务或者组件中引入并注入HttpClient
+    ```
+    import {HttpClient,HttpHeaders} from "@angular/common/http";
+    constructor(public http:HttpClient) { }
+    this.http
+    ```
+- 具体请求
+    ```
+    // get请求
+    this.http.get("api").subscribe(response => {});
+    // post请求
+    const httpOptions = {
+        headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    };
+    this.http.post("api", parm, httpOptions).subscribe(response => {});
+    // jsonp
+    this.http.jsonp(api,'callback').subscribe(response => {});
+    ```
+
+## 路由
+
+1. 生成一个带有路由的项目
+1. 在路由模块里配置路由(如app-routing.module.ts)
+    ```
+    const routes: Routes = [
+        {path: 'home', component: HomeComponent},
+        {path: 'news', component: NewsComponent},
+        {path: 'news/:id', component: NewsComponent},
+        { //默认路由
+            path: '**',
+            redirectTo: '/home',
+        }
+    ];
+    ```
+1. 在模板中加入路由挂载点(`<router-outlet></router-outlet>`)
+
+### 路由跳转
+
+在模板中跳转:
+```
+// active为选中的css class
+<a routerLink="/home" routerLinkActive="active">首页</a>
+<a routerLink="/news" routerLinkActive="active">新闻</a>
+```
+js中跳转:
+```
+import { Router } from '@angular/router';
+constructor(private router: Router) {}
+this.router.navigate(['/news', id]);
+```
+
+### 动态路由
+
+```
+// 路由定义
+{path: 'news/:id', component: NewsComponent},
+// 发出
+// js跳转
+import { Router} from '@angular/router';
+constructor(private router: Router) {}
+this.router.navigate(['/news'，123]);
+// dom跳转
+<a routerLink="['/news/', '123']" >新闻</a>
+// 接收
+import { ActivatedRoute } from '@angular/router';
+constructor(private router: ActivatedRoute) {}
+this.route.params.subscribe(data => console.log(data));
+```
+
+### get传值
+
+```
+// 发出
+// js跳转
+import { Router ,NavigationExtras} from '@angular/router';
+constructor(private router: Router) {}
+let navigationExtras: NavigationExtras = {
+    queryParams: { 'session_id': '123' }, //传值
+    fragment: 'anchor' // 锚点
+};
+this.router.navigate(['/news'],navigationExtras);
+// dom跳转
+<a routerLink="/news" [queryParams]="{id: 1}">新闻</a>
+// 接收
+import { ActivatedRoute } from '@angular/router';
+constructor(private router: ActivatedRoute) {}
+this.route.queryParams.subscribe(data => console.log(data));
+```
+
+### 嵌套路由
+
+```
+// 路由配置
+{
+    path: 'news',
+    component: NewsComponent,
+    children: [
+        {
+            path: 'newslist',
+            component: NewslistComponent
+        },
+        {
+            path: 'newsadd',
+            component: NewsaddComponent
+        },
+        {
+            path: '**',
+            component: NewslistComponent
+        }
+    ]
+}
+// 在父组件模板中增加
+<router-outlet></router-outlet>
+```
+
 ## 注意点
 
 ### 引入图片
