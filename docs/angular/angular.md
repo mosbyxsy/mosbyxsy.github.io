@@ -282,12 +282,25 @@ this.route.queryParams.subscribe(data => console.log(data));
 <router-outlet></router-outlet>
 ```
 
+## 自定义模块
+
+```
+ng g module module/user --routing // --routing 生成路由文件
+ng g component module/user // 生成自定义模块根组件
+```
+
+- 自定义模块中的组件如果要被根模块引用，需要`export`
+- 自定义模块可以使用懒加载模式
+```
+{
+    path:'user',loadChildren : './usermodule/usermodule.module#UsermoduleModule'
+}
+```
+
 ## 注意点
 
-### 引入图片
-`<img src="assets/images/img1.png" />`
-
-### ngIf和ngFor不能在同一标签上
+- `<img src="assets/images/img1.png" />`
+- ngIf和ngFor不能在同一标签上
 
 
 
