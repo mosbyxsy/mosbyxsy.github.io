@@ -69,6 +69,7 @@
 	1. [Sublime text快捷键](#docs/ide/sublime)
 1. [其他](#)
 	1. [常用软件](#docs/other/software)
+	1. [charls和fiddler](#docs/other/proxy)
 	1. [常用语区别及理解](#docs/other/keyword)
 	1. [谷歌浏览器快捷键](#docs/other/googleShorcut)
 	1. [移动端调试](#docs/other/mobileDebug)
