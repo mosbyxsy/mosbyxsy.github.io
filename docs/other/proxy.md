@@ -1,5 +1,7 @@
 # charls和fiddler
 
+*创建于：2019-08-07；更新于：2018-08-07*
+
 [charls](https://www.charlesproxy.com/)和[fiddler](https://www.telerik.com/fiddler)是目前前端开发中使用最多的代理软件，除了能够代理pc端请求，还能代理手机的请求；
 
 ## 概括
