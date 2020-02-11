@@ -64,6 +64,7 @@ li ul{
 }
 .icp-content {
     display: none;
+    text-align: center;
 }
 .aside-pc .icp-content{
     background: #f5f5d5;
