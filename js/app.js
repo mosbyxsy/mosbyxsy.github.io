@@ -36,7 +36,7 @@
     function asideInit() {
         var hash = getHash();
         $.get("./aside.md", function(data){
-            $("#aside").html(marked(data)); 
+            $("#aside").prepend(marked(data));
             $("#aside code").map(function() {//代码高亮
                 Prism.highlightElement(this);
             });
@@ -216,6 +216,14 @@
             }
         })
     }
+    //显示ICP备案号
+    function icpShow() {
+        var isMosby = location.href.indexOf("mosby.top");
+        if (1) {
+            $("#aside").css("padding-bottom", "30px");
+            $("#icp-content").show();
+        }
+    }
     //执行
     function render() {
         environment = isPC();//是否是pc端
@@ -227,6 +235,7 @@
         topScreen();//回到顶部
         fullScreen();//目录/全屏切换
         winsize();
+        icpShow();//显示备案号
         $(window).on("hashchange", linkData);
     }
     //权限验证
@@ -235,7 +244,7 @@
             if (getHash() === "mosby") {
                 render();
             } else {
-                $("body").text("网站暂未开放哦！")
+                $("body").text("网站暂未开放哦！");
                 alert("网站暂未开放，请以后重试！");
             }
         } else {
