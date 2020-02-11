@@ -62,6 +62,9 @@ li ul{
 	right: 0;
 	bottom: 40px;
 }
+.icp-content {
+    display: none;
+}
 .aside-pc .icp-content{
     background: #f5f5d5;
     position: fixed;
