@@ -218,7 +218,7 @@
     }
     //显示ICP备案号
     function icpShow() {
-        var isMosby = location.href.indexOf("mosby.top");
+        var isMosby = location.href.indexOf("mosby.top") !== -1;
         if (isMosby) {
             $("#aside").css("padding-bottom", "30px");
             $("#icp-content").show();
