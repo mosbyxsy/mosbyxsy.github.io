@@ -85,6 +85,7 @@
 	1. [三次握手与四次挥手](#docs/other/tcp)
 	1. [github搜索](#docs/other/githubAnalyze)
 	1. [域名解析冲突](#docs/other/analysis)
+	1. [IP查询](#docs/other/ip)
 	
 ## 其他
 1. [声明](#docs/statement)
