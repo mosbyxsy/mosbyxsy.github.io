@@ -23,3 +23,5 @@ curl ipinfo.io
 curl icanhazip.com
 curl ifconfig.me
 ```
+
+![实时IP](https://tool.lu/netcard/)
