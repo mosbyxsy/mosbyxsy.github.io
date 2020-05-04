@@ -5,6 +5,7 @@
 React由Facebook在2013年5月开源，是用于构建用户界面的javaScript库。
 
 - [React官网](https://reactjs.org/)
+- [React中文官网](https://zh-hans.reactjs.org/)
 - [React中文文档](https://react.docschina.org/)
 - [React入门](https://segmentfault.com/a/1190000012921279)
 
