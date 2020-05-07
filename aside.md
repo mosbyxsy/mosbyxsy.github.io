@@ -87,6 +87,7 @@
 	1. [github搜索](#docs/other/githubAnalyze)
 	1. [域名解析冲突](#docs/other/analysis)
 	1. [IP查询](#docs/other/ip)
+	1. [版本和阶段](#docs/other/versions)
 	
 ## 其他
 1. [声明](#docs/statement)
