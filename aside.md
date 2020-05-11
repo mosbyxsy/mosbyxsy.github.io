@@ -40,6 +40,7 @@
 	1. [防抖和节流](#docs/js/debounceAndThrottle)
 	1. [js执行顺序](#docs/js/abValue)
 	1. [正则](#docs/js/regExp)
+	1. [class说明](#docs/js/class)
 1. [图表与动画](#)
 	1. [live2d网页插入动画](#docs/canvas/live2d)
 1. [环境配置及项目搭建](#)
