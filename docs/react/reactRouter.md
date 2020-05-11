@@ -1,10 +1,10 @@
 # react-router
 
-*创建于：2018-08-17；更新于：2019-04-16*
+*创建于：2018-08-17；更新于：2020-05-11*
 
 ## 使用
 
-下面是react-router简单使用基本示例，详细示例请查看[demo]()
+[react-router](https://reacttraining.com/react-router/)是配合react应用使用的路由库(不是由facebook维护)
 
 ### react-router 3.x
 
@@ -16,13 +16,18 @@ js跳转方法：
 ### react-router 4.x
 
 js跳转方法：
-- this.props.history.push；
+- this.props.history.push；(component方式或者withRouter)
 - 使用contextTypes,this.context.router.history.push
+
+### react-router 5.x
+
+js跳转方法
+- history = useHistory();history.push
 
 ## 3.x与4.x区别与注意点
 
-引用方式
-layout component
+- 引用方式，和API不同
+- layout component
 
 
 ## 懒加载
@@ -32,6 +37,8 @@ layout component
 本文主要介绍以下几种：
 - 自定义高阶组件进行按需加载
 - 使用react-loadable小工具库
+- 使用[loadable-components](https://github.com/gregberge/loadable-components)
+- 使用[React.lazy](https://zh-hans.reactjs.org/docs/code-splitting.html)
 - 使用getComponent(仅限于3.x,[demo](https://github.com/mosbyxsy/react-lazy-loading-getcomponent))
 
 
