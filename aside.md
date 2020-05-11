@@ -52,6 +52,7 @@
 	1. [yarn](#docs/auto/yarn)
 	1. [babel转化最新语法](#docs/auto/babelPack)
 	1. [nodejs版本](#docs/auto/node)
+	1. [脚手架搭建](#docs/auto/cli)	
 1. [布局](#)
 	1. [移动端高清布局](#docs/layout/highDefinition)
 1. [Windows](#)
