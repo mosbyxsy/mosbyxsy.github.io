@@ -4,7 +4,7 @@
 
 ## 希腊字母表
 
-![希腊字母表](./img/char.jpg)
+![希腊字母表](https://gitee.com/gitsdn/img/raw/master/img/20200614144931.jpg)
 
 ## 软件版本
 

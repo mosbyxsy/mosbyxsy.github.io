@@ -6,7 +6,7 @@
 
 ## TCP报文首部格式
 
-![原型图](./img/tcp.jpg)
+![原型图](https://gitee.com/gitsdn/img/raw/master/img/20200614145651.jpg)
 
 部分说明：
 - SYN：同步标志位，用来请求建立连接;
@@ -17,7 +17,7 @@
 
 ## 三次握手
 
-![三次握手](./img/link.jpg)
+![三次握手](https://gitee.com/gitsdn/img/raw/master/img/20200614145513.jpg)
 
 刚开始的时候，服务器和客户端都为CLOSED状态。在通信开始前，双方都得创建各自的传输控制块（TCP）。
 
@@ -47,7 +47,7 @@
 
 - 这个报文段可以携带数据
 
-![三次握手](./img/link.gif)
+![三次握手](https://gitee.com/gitsdn/img/raw/master/img/20200614145441.gif)
 
 ### 三次握手的作用
 
@@ -63,7 +63,7 @@
 
 ## 四次挥手
 
-![四次挥手](./img/fin.jpg)
+![四次挥手](https://gitee.com/gitsdn/img/raw/master/img/20200614145240.jpg)
 
 数据传输完毕后，双方都可释放连接。最开始的时候，客户端和服务器都是处于ESTABLISHED状态，然后客户端主动关闭，服务器被动关闭。
 
@@ -96,7 +96,7 @@
 该状态会持续2MSL（最长报文段寿命）时间，这个期间TCP连接还未释放，若该时间段内没有服务端的重发请求的话，客户端就进入CLOSED状态，撤销TCP。
 服务端只要收到了客户端发出的确认，立即进入CLOSED状态。同样，撤销TCP后，就结束了这次的TCP连接。可以看到，服务器结束TCP连接的时间要比客户端早一些。
 
-![四次挥手](./img/fin.gif)
+![四次挥手](https://gitee.com/gitsdn/img/raw/master/img/20200614145106.gif)
 
 ### 注意
 

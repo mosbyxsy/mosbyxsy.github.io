@@ -15,7 +15,7 @@ a.x // undefined a的值为{n: 2}
 
 我的理解：
 
-![基本概念](./img/abValue.png)
+![基本概念](https://gitee.com/gitsdn/img/raw/master/img/20200614144651.png)
 
 1. 定义变量a,并且指向`{n: 1}`;
 1. 定义变量b,并且将a的值赋值给b，b指向`{n: 1}`;

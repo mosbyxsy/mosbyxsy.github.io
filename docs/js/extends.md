@@ -22,7 +22,7 @@ var animal = new Animail()
 
 原型图：
 
-![原型图](./img/extends.jpg)
+![原型图](https://gitee.com/gitsdn/img/raw/master/img/20200614145015.jpg)
 
 举例说明1：
 ```javascript

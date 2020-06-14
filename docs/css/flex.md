@@ -4,11 +4,11 @@
 
 ## 基本概念
 
-![基本概念](./img/flex1.png)
+![基本概念](https://gitee.com/gitsdn/img/raw/master/img/20200614145335.png)
 
 ## 属性说明
 
-![属性说明](./img/flex2.png)
+![属性说明](https://gitee.com/gitsdn/img/raw/master/img/20200614145411.png)
 
 ## align-item和align-content对比
 
