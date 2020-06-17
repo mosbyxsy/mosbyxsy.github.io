@@ -91,6 +91,7 @@
 	1. [域名解析冲突](#docs/other/analysis)
 	1. [IP查询](#docs/other/ip)
 	1. [版本和阶段](#docs/other/versions)
+	1. [图床](#docs/other/picture)
 	
 ## 其他
 1. [声明](#docs/statement)
