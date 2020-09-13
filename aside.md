@@ -94,6 +94,7 @@
 	1. [版本和阶段](#docs/other/versions)
 	1. [图床](#docs/other/picture)
 	1. [评论系统](#docs/other/note)
+	1. [名词解释](#docs/other/explain)
 	
 ## 其他
 1. [声明](#docs/statement)
