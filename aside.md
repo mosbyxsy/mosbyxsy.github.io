@@ -23,6 +23,7 @@
 	1. [查看git分支](#docs/git/gitBranch)
 	1. [git比较分支差异](#docs/git/diffBranch)
 	1. [删除git仓库提交记录](#docs/git/gitRemove)
+	1. [git文件忽略](#docs/git/gitignore)
 	1. [git对应多个远端](#docs/git/gitMore)
 	1. [push代码到多个远端](#docs/git/morePush)
 1. [Css](#)
