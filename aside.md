@@ -98,6 +98,7 @@
 	1. [图床](#docs/other/picture)
 	1. [评论系统](#docs/other/note)
 	1. [名词解释](#docs/other/explain)
+	1. [软件下载](#docs/other/softDownload)
 	
 ## 其他
 1. [声明](#docs/statement)
